@@ -27,6 +27,11 @@ A powerful background removal tool using deep learning (BiRefNet) with both a we
 
 ## Usage
 
+### Watermark
+
+The project logo is added as a transparent watermark to the bottom-right of the output image.
+![Example Output](example.png)
+
 ### Web App (Gradio)
 
 Run the Gradio interface:
@@ -69,6 +74,7 @@ python client.py input.jpg output.png
 ## HOW IT WORKS
 
 ### 1. Imports and Model Setup
+
 - **Libraries:**
   - `gradio`: For building the web UI.
   - `load_img`: Custom function to load images.
@@ -80,6 +86,7 @@ python client.py input.jpg output.png
   - Prepares images for the model (resize, normalize, convert to tensor).
 
 ### 2. Processing Functions
+
 - **`fn(image)`**
   - Takes an uploaded image, loads and converts it to RGB.
   - Makes a copy of the original.
@@ -95,12 +102,14 @@ python client.py input.jpg output.png
   - For file uploads: loads the image, processes it, saves the result as PNG, and returns the new file path.
 
 ### 3. Gradio UI Components
+
 - **Inputs/Outputs:**
   - `gr.ImageSlider`, `gr.Image`, `gr.Textbox`, `gr.File`: Different ways for users to upload images and view/download results.
 - **Examples:**
   - Preloaded example images for quick testing.
 
 ### 4. Gradio Interfaces
+
 - **Tabs:**
   - `tab1`: Upload an image and see the processed result.
   - `tab2`: Paste an image URL and see the processed result.
@@ -109,6 +118,7 @@ python client.py input.jpg output.png
   - Combines the above tabs into a single web app with multiple options for users.
 
 ### 5. How it Works for the User
+
 1. User opens the web app (locally or on HuggingFace Spaces).
 2. Chooses a tab (upload image, URL, or file).
 3. Uploads or pastes an image.
@@ -117,6 +127,7 @@ python client.py input.jpg output.png
 6. User can download the processed image (PNG with transparency).
 
 ### 6. Summary
+
 - The app is a web-based tool for removing backgrounds from images using a neural network.
 - It’s interactive and user-friendly, thanks to Gradio.
 - The heavy lifting (background removal) is handled by a pre-trained segmentation model running on GPU.
