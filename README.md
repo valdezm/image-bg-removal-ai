@@ -1,9 +1,12 @@
+![Project Logo](logo-t.png)
+
 # Background Remover
 
 A powerful background removal tool using deep learning (BiRefNet) with both a web UI (Gradio) and a production-ready API (FastAPI).
 
 ## Features
 
+- Project logo: ![logo-t.png](logo-t.png)
 - Remove backgrounds from images using a state-of-the-art segmentation model
 - Web interface for easy uploads and downloads
 - REST API for programmatic access
