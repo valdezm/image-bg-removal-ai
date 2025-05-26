@@ -59,6 +59,7 @@ Thumbs.db
 Desktop.ini
 
 # Images and output
+!logo-t.png
 *.png
 *.jpg
 *.jpeg
